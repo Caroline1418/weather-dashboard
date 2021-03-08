@@ -3,79 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/80833262c1.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Weather App</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
-    </nav>
+
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
 
     <div class="container">
-        <div class="row">
-            <div class="col-4 bg-light">
-                <p class="search-header my-1">Search for a city</p>
-                <div class="input-group mb-3">
-                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="search button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history">
-                    Clear History
+        <div class="search">
+            <div class="row">
+                <h1>Search for a City:</h1>
+            </div>
+            <div class="row">
+                <input type="text" class="searchInput" placeholder="Seattle">
+                <button type="submit" class="searchBtn">
+                <i class="fas fa-search"></i>
                 </button>
-                <form id="history"></form>
             </div>
-            <div class="col-8">
-                <div class="row mr-0">
-                    <div class="col-12 border border-dark m-3 rounded">
-                        <div class="row">
-                            <div class="col-12">
-                                <span id="city-name" class="city-name align-middle"></span>
-                                <img id="current-pic" src="placeholder" alt="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="temperature"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="humidity"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="wind-speed"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="UV-index"></p>
-                        </div>
-                    </div>
+            <div class="historyItems"></div>
+        </div>
+        <div class="col-two-container">
+            <div class="forecast">
+                <div class="row">
+                    <h1 class="cityName">City Name</h1>
+                    <h1 class="currentDate"></h1>
+                    <img class="weatherIcon"></img>
+                </div>
+                <div class="row">
+                    <p class="temp">Temperature:</p>
+                </div>
+                <div class="row">
+                    <p class="humidity">Humidity:</p>
+                </div>
+                <div class="row">
+                    <p class="windSpeed">Wind Speed:</p>
+                </div>
+                <div class="row">
+                    <p class="uvIndex">UV Index:</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <h3>5 Day Forecast</h3>
+
+            <div class="five-day-container">
+                <h1>5-Day Forecast:</h1>
+                <div class="card-row">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
             </div>
         </div>
     </div>
-
-    <script src="./script.js"></script>
     
 </body>
+<script src="./script.js"></script>
 </html>
